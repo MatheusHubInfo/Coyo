@@ -1,0 +1,21 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    color: white;
+}
+h1{
+    color: white;
+    text-align: center;
+    margin-top: 8rem;
+    margin-bottom: 15rem;
+}
+.container{
+    background-image: url(assets/coyo-background.jpg);
+    width: 100%;
+    
+}
+#product{
+    padding-bottom: 30rem;
+}
