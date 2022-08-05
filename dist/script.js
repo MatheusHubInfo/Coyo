@@ -1,7 +1,7 @@
 var products = [
-  //  {id: 1, name: 'Angular', description: 'Superheroic JavaScript MVW Framework.', price: 100},
-  //  {id: 2, name: 'Ember', description: 'A framework for creating ambitious web applications.', price: 100},
-  //  {id: 3, name: 'React', description: 'A JavaScript Library for building user interfaces.', price: 100}
+  //  {id: 1, nome: 'Angular', descrição: 'Framework', preço: 100},
+  //  {id: 2, nome: 'Vue', descrição: 'Framework', preço: 100},
+  //  {id: 3, nome: 'React', descrição: 'Framework', preço: 100}
 ];
 
 function findProduct (productId) {
@@ -26,7 +26,6 @@ var List = Vue.extend({
     filteredProducts() {
       return this.products.filter( (product) => {
       	return product.name.indexOf(this.searchKey) > -1
-        //return !product.name.indexOf(this.searchKey)
       })
     }
   }
@@ -46,8 +45,7 @@ var ProductEdit = Vue.extend({
   },
   methods: {
     updateProduct: function () {
-      //Obsolete, product is available directly from data...
-      let product = this.product; //var product = this.$get('product');
+      let product = this.product;
       products[findProductKey(product.id)] = {
         id: product.id,
         name: product.name,
@@ -80,8 +78,7 @@ var AddProduct = Vue.extend({
   },
   methods: {
     createProduct: function() {
-      //Obsolete, product is available directly from data...
-      let product = this.product; //var product = this.$get('product');
+      let product = this.product; 
       products.push({
         id: Math.random().toString().split('.')[1],
         name: product.name,
